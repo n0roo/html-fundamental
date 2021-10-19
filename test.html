@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>테스트</title>
+        <style>
+        .menu {
+            display: block;
+            width: 200px;
+            background-color: #000;
+            color: #fff;
+            border-radius: 20px;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow: hidden; /* 반응형 애니메이션용 */
+            transition: all 0.5s ease; /* 반응형 애니메이션 */
+        }
+        .menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .menu a, .menu > label {
+            display: block;
+            height: 25px;
+            padding: 8px;
+            cursor: pointer;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #expand-menu { /* 체크박스 폼 요소 감춤 */
+             display: none;
+        }
+        #expand-menu:checked ~ ul { /* 체크박스 체크되었으면 메뉴 목록 표시 - 반응형 표시용 */
+            display: block;
+            height: auto;
+        }
+        </style>
+       <!-- <link rel="stylesheet" type="text/css" href="test.css"/>-->
+    </head>
+    <body>
+        <div class="menu">
+            <label for="expand-menu"><div>메뉴</div></label>
+            <input type="checkbox" id="expand-menu" name="expand-menu">
+            <ul>
+                <li><a href="#" class="item"><div>프로필</div></a></li>
+                <li><a href="#" class="item"><div>데이터사용량</div></a></li>
+                <li><a href="#" class="item"><div>내URL</div></a></li>
+                <li><a href="#" class="item"><div>구매내역</div></a></li>
+                <li><a href="#" class="item"><div>추천목록</div></a></li>
+                <li><a href="#" class="item"><div>설정</div></a></li>
+            </ul>
+        </div>
+    </body>
+</html>

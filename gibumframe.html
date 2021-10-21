@@ -2,18 +2,13 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="style/style.css">
         <title>main</title>
     </head>
     <body>
 
         <!-- start header -->
-        <header style="left: 30px; 
-                        top:300px ;
-                        width: 800px;
-                        height: 300px;
-                        padding: 30px 
-                        20px; background: 
-                        lightblue; ">
+        <header>
 
             <div class="nav">
                 <p>header</p>
@@ -34,25 +29,15 @@
 
 
         <!-- start main -->
-        <main style="left: 50px; 
-                    top: 500px;;
-                    width: 800px;
-                    height: 500px;
-                    padding: 30px 
-                    20px; background: 
-                     pink; ">
+        <main>
 
-            <img src="pic1.jpg" alt="코드" width="100px" />
-            <button>button</button>
+            <img src="/images/pic1.jpg" alt="코드" width="300px" height="300px" />
 
-
-            <video controls muted>
-                <source src="file_example_MP4_480_1_5MG.mp4" type="video/mp4">
+            <video controls muted width="300px" height="300px">
+                <source src="/videos/file_example_MP4_480_1_5MG.mp4" type="video/mp4">
                 지원안함
             </video>
-            <audio></audio>
             <br>
-            <select>select</select>
 
             <article>
                 <h1>article</h1>
@@ -74,40 +59,34 @@
                 </select>
             </div>
 
-            <table style="border: 1px solid black; float:right" >
-                <thead>
-                    <tr>
-                        <th style="border: blue;" colspan="50" bgcolor="green">Developer : 김기범</th>
-                    </tr>
-                    <tr>
-                        <td>Front : </td>
-                            <td>
-                                HTML , CSS , JavaScript
-                            </td>
-                    </tr>
-                    <tr>
-                        <td>back : </td>
-                        <td>JAVA , JAVA , JAVA</td>
-                    </tr>
-                </thead>                
-            </table>   
+               
         </main>
         <!-- end main -->
 
         <!-- start footer-->
-        <footer style="left: 50px; 
-                        top: 500px;;
-                        width: 800px;
-                        height: 100px;
-                        padding: 30px 
-                        20px; background: 
-                        lightgreen; ">
-            <ul>
-                <li>Name : 김기범</li>
-                <li>Age : 24</li>
-                <li>Email : g16um9806@gmail.com</li>
-                <li>Git Hub :<a href="https://github.com/g16um98" target="_blank"> https://github.com/g16um98</a></li>
-            </ul> 
+       <footer>
+            <span>
+                Name : 김기범<br>
+                Age : 24<br>
+                Email : g16um9806@gmail.com<br>
+                Git Hub :<a href="https://github.com/g16um98" target="_blank"> https://github.com/g16um98</a><br>
+            </span>
+                <table class="table-set">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Developer : 김기범</th>
+                        </tr>
+                    </thead>
+                        <tr>
+                            <td>Front : </td>
+                                <td>HTML , CSS , JavaScript</td>
+                        </tr>
+                        <tr>
+                            <td>back : </td>
+                            <td>JAVA , JAVA , JAVA</td>
+                        </tr>
+                </table>
+
         </footer>
         <!-- end footer-->
     </body>

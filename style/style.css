@@ -1,0 +1,32 @@
+header{
+    width: auto;
+    height: auto;
+    background: violet;
+    margin: 25px;
+    padding: 25px;
+}
+
+main{
+    width: auto;
+    height: auto;
+    background:yellow;
+    margin: 25px;
+    padding: 25px;
+}
+
+footer{
+    width: 100%;
+    height: 100%;
+    background: wheat;
+    margin: 25px;
+    padding: 25px;
+}
+
+table,th{
+    border: solid #afffaf;
+}
+
+.table-set{
+    position: inherit;
+}
+

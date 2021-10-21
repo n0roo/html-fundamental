@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>myself</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+                div {
+                    margin: 5px;
+                    padding: 5px;
+                    border: none;
+                    width: 800px;
+                    text-align: center;
+                }
+
+        #title {
+            border-left: 10px solid #688ff4; padding: 0.5em; border-bottom: 2px solid #688ff4;
+        }
+
+        #con {
+            margin: 0 auto;
+            width: 600px;
+            height: 300px;
+            text-align: left;
+            float: right;
+            
+        }
+
+        #header{
+            width: 780px;
+            height: 100px;
+            line-height: 18px;
+            text-align: left;
+        }
+
+        .nav ::before{
+            font-family: 'Material Icons';
+            font-size: 1.5em;
+            float: left;
+            clear: left;
+            border: none;
+            
+        }
+        .nav label::before{ content: '\e5d2'; }
+        .nav li:nth-child(1) a::before{ content: '\e851'; }
+        .nav li:nth-child(2) a::before{ content: '\e8d6'; }
+        .nav li:nth-child(3) a::before{ content: '\e817'; }
+        .nav li:nth-child(4) a::before{ content: '\e65f'; }
+
+
+        .nav {
+            border: none;
+            font-size: 14px;
+            position: fixed;
+
+            width: 170px;
+            height: 600px;
+            background-color:rgb(62, 157, 235);
+            color: #fff;
+            border-radius: 20px;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow: hidden; /* 반응형 애니메이션용 */
+            transition: all 0.5s ease; /* 반응형 애니메이션 */
+        }
+        .nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav a, .nav > label {
+            display: block;
+            height: 25px;
+            padding: 8px;
+            cursor: pointer;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav a:hover {
+            color: #000;
+        }
+        .nav ul li:hover, .nav > label:hover {
+            background-color: #fff;
+            color: #000;
+            border-radius: 10px;
+        }
+        .nav div {
+            line-height: 1.5;
+            font-size: 1em;
+            font-family: 'Noto Sans KR';
+            padding: 0 0 0 50px; /* 아이콘과 텍스트 사이 여백 */
+        }
+
+
+
+        #wrap {
+            overflow: hidden;
+            width: 780px;
+        }
+
+        #content {
+            float : left;
+            width: 600px;
+            height: 300px;
+            text-align: left;
+        }
+
+        #banner {
+            float: left;
+            width: 135px;
+            height: 300px;
+        }
+
+        #footer {
+            width: 780px;
+            height: 100px;
+            line-height: 15px;
+        }
+        
+        
+        
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="header"><img src="pic2.png" width="780" height="100" alt="사진" title="HTML"></div>
+        <div class="nav">
+            <label for="expand-nav">MENU</label>   
+            <ul>
+                <li><a href="myself.html" class="item">자기소개</a></li>
+                <li><a href="myself3.html" class="item">앞으로의 진로</a></li>
+                <li><a href="myself4.html" class="item">자신있는 것</a></li>
+                <li><a href="myself5.html" class="item">미래의 나</a></li>
+            </ul>
+        </div>
+        </aside>
+
+        <p>
+        <div id="con">
+            <h3>
+                <p id="title">장점</p>
+            </h3>
+            <b>저의 장점은 포기하지 않는 다는 것입니다.</b><br>
+            저는 야구를 하며 같은 부의 인대가 6번 끊어지고 1번의 골절이 있었습니다.<br>
+            많은 부상이 있었지만, 꾸준한 재활운동과 할수 있다는 자신감을 갖고 포기하지 않았습니다<br>
+            그렇게 저는 가장 중요했던 고등학교 시즌에서 0.403(4할3리) 라는 대기록을 세울수 있었습니다.<br>
+            누구에게나 슬럼프는 있습니다. 하지만 슬럼프가 오거나 더이상 전진하지 못하고 제자리 걸음을 하고있다는 느낌을 받을 때,<br>
+            그것을 이겨내는 방법은 사람마다 다르고 그 방법을 깨우치는것 조차 쉽지않습니다.
+            <br> 저는 실패하거나 어려운 상황일 때 성장할 수 있는 단단한 사람이고 생각하고, 이것은 저의 가장 큰 장점입니다.
+        </div>
+        </p>
+
+        <p>
+        <div id="con">
+            <h3 class="title" >
+                <p id="title">
+                    약점</p>
+            </h3>
+            <b>저의 약점은 생각이 많다는 것입니다.</b>
+            <br>생각이 많은것이 모든 상황에서 단점으로 다가오는것은 아니지만.<br>
+            쉽게 풀어나갈수 있는 문제를 불필요한 부분까지 생각해서 시간을 지체하는 경우도 있었습니다.<br>
+            분명 이렇게 단점이 될때도 있지만, 이러한 저의 혼자만에 생각에서 저는 한단계 발전하고 획기적인 사람이 된다고 생각합니다.<br>
+            정해진 룰에 따르는 것은 당연한 일이지만.<br>
+            항상 보다 효율적인 사람이 되기위해 꾸준히 연구하고 개발하는 합리적인 생각을 많이 하는 사람이 되겠습니다.
+        </div>
+        </p>
+    </div>
+</body>
+
+</html>

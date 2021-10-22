@@ -1,32 +1,142 @@
-header{
-    width: auto;
-    height: auto;
-    background: violet;
-    margin: 25px;
-    padding: 25px;
-}
+*{margin: 0px; padding: 0px;}
+ul{list-style: none;} /* 리스트 앞에 . 제거 */
+a{text-decoration: none;} /* 하이퍼링크에 밑줄 제거 */
 
-main{
-    width: auto;
-    height: auto;
-    background:yellow;
-    margin: 25px;
-    padding: 25px;
-}
+        h1{color:
+            white;
+            text-align: center;
+            }
 
-footer{
-    width: 100%;
-    height: 100%;
-    background: wheat;
-    margin: 25px;
-    padding: 25px;
-}
+        header{
+            width: 800px;  /* 메인구조의 사이즈 통일(headr, main, footer) */
+            height: 95px;
+            background: #424b57;
+            position: relative;
+            
+        }
 
-table,th{
-    border: solid #afffaf;
-}
+        #logo{  /* 로고 만들어서 왼쪽 상단에 삽입해놓기 */
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            width: 15px;
+            height: 15px;
+        }
 
-.table-set{
-    position: ;
-}
+        #site-nav{  /* 사이트간에 nav */
+            position: absolute;
+            top: 70px;
+            right: 10px; 
+            color: white;
+            
+        }
 
+        #menu{
+            position: absolute;
+            top: 20px;
+            right: 10px;
+            color: white;
+        }
+
+        #menu a{color: white;}
+
+        /* nav */
+        /* 페이지 내부에 div간에 이동으로 만들어보기 */
+        .nav ::before{
+            font-family: 'Material Icons';
+            font-size: 1.5em;
+            float: left;
+            clear: left;
+            border: none;
+            
+        }
+        .nav label::before{ content: '\e5d2'; }
+        .nav li:nth-child(1) a::before{ content: '\e851'; }
+        .nav li:nth-child(2) a::before{ content: '\e8d6'; }
+        .nav li:nth-child(3) a::before{ content: '\e817'; }
+        .nav li:nth-child(4) a::before{ content: '\e65f'; }
+
+
+        .nav {
+            border: none;
+            text-align: left;
+            font-size: 14px;
+            position: fixed;
+            top: 95px;
+            left: 710px;
+            float: right;
+            width: 170px;
+            height: 700px;
+            background-color: white;
+            color: #fff;
+            border-radius: 20px;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow: hidden; /* 반응형 애니메이션용 */
+            transition: all 0.5s ease; /* 반응형 애니메이션 */
+        }
+        .nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav a, .nav > label {
+            display: block;
+            height: 25px;
+            padding: 8px;
+            cursor: pointer;
+            color: black;
+            text-decoration: none;
+        }
+
+        .nav a:hover {
+            color: #000;
+        }
+        .nav ul li:hover, .nav > label:hover {
+            background-color: grey;
+            color: #000;
+            border-radius: 10px;
+        }
+        .nav div {
+            line-height: 1.5;
+            font-size: 1em;
+            font-family: 'Noto Sans KR';
+            padding: 0 0 0 50px; /* 아이콘과 텍스트 사이 여백 */
+        }
+        /* nav end */
+
+
+        main{
+            text-align: center;
+            width: 629px;
+            height: 700px;
+            border: 1px solid black;
+
+        }
+
+        footer{
+            width: 800px;
+            height: 100px;
+            background: #424b57;
+        }
+
+        div a{color: white;}
+
+
+
+        table thead{
+            background-color: lightblue;
+        }
+
+
+
+        .div1{
+            float: left;
+        }
+
+        .div2{
+            float: right;
+        }
+
+        /* 전체 페이지가 가운데로 오도록 */
+        #page{width: 820px; margin: 0px auto;}

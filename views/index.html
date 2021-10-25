@@ -2,91 +2,40 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="/style/style.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <title>main</title>
+        <title>main page</title>
+        <link rel="stylesheet" href="/style/main-page.css">
+        <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;600&family=Shrikhand&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div id="page">
-            <!-- start header -->
-            <header>
-                <!-- Logo 만들어서 삽입하기 -->
-                <!-- <div id="logo">
-                    <img src="/images/logo1.png" alt="Logo">
-                </div> -->
+        <!-- headr -->
+        <header>
+            <b id="bthome">MENU</b>
+                <li id="bt02"><a href="/views/gibum1.html">1</a></li>
+                <li id="bt03"><a href="/views/gibum2.html">2</a></li>
+                <li id="bt04"><a href="/views/gibum3.html">3</a></li>
+                <li id="bt05"><a href="/views/gibum4.html">4</a></li>
+                <li id="bt05"><a href="/views/gibum5.html">5</a></li>
+        </header>
+        <!-- headr -->
 
-                <h1>Kim Gibum</h1>
-
-                <div id="site-nav">
-                    <h4>
-                        <a href="gibum1.html">Introduce</a> |
-                        <a href="gibum2.html">My plan</a> |
-                        <a href="gibum3.html">Confidence</a> |
-                        <a href="gibum4.html">Future</a>
-                    </h4> 
+        <!-- main -->
+        <section>
+            <div id="window1">
+                <div id="intro">
+                    <h1>Hi, im Gibum</h1>
+                    <h3>지금부터 날 소개하지</h3>
                 </div>
-                
-            </header>
-            <!-- end header -->
+            </div>
 
+            <div id="window2">
+                <img id="mock" src="mock.png" alt="">
+                <div id="myself">
+                  <h1>야구선수가 아닌!</h1>
+                  <h2>프론트엔드 개발자가 되기위한 앞으로의 과정</h2>
+                </div>
+              </div>
+        </section>
 
-
-            <!-- start main -->
-            <main>
-                <h2>Main</h2>
-                    <div class="nav">
-                        <label for="expand-nav"><b>MENU</b></label>   
-                        <ul>
-                            <li><a href="#" class="item">1</a></li>
-                            <li><a href="#" class="item">2</a></li>
-                            <li><a href="#" class="item">3</a></li>
-                            <li><a href="#" class="item">4</a></li>
-                        </ul>
-                    </div>
-                <!-- <div>
-                    <label for="hobby-select">Choose hobie</label>
-
-                    <select name="hobby" id="hobby-select">
-                        <option value="">--please choose option</option>
-                        <option value="soccer">Soccer</option>
-                        <option value="baseball">Baseball</option>
-                        <option value="pingpong">Pingpong</option>
-                    </select>
-                </div> -->
-
-                
-            </main>
-            <!-- end main -->
-
-            <!-- start footer-->
-            <footer>
-                <span>
-                    <div class="div1">                   
-                        Name : 김기범<br>
-                        Age : 24<br>
-                        Email : g16um9806@gmail.com<br>
-                        Git Hub :<a href="https://github.com/g16um98" target="_blank"> https://github.com/g16um98</a><br>
-                    </div>    
-                    <div>
-                        <table class="div2">
-                            <thead>
-                                <tr>
-                                    <th colspan="2">Developer : 김기범</th>
-                                </tr>
-                            </thead>
-                                <tr>
-                                    <td>Front : </td>
-                                        <td>HTML , CSS , JavaScript</td>
-                                </tr>
-                                <tr>
-                                    <td>back : </td>
-                                    <td>JAVA , JAVA , JAVA</td>
-                                </tr>
-                        </table>
-                    </div>
-                </span>
-            </footer>
-            <!-- end footer-->
-        </div>
+        <!-- main -->
     </body>
-</html> 
+</html>

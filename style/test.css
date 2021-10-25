@@ -1,0 +1,23 @@
+header{
+    background-image: -moz-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);
+}
+
+/* #window2 {
+    background-size: 50px;
+    background: #FEAC5E;
+    background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);
+    background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  } */
+
+#mock{
+    max-width: 900px;
+    margin-left: 80px;
+    -webkit-flex: 1;
+    flex: 1
+}

@@ -1,5 +1,5 @@
 body{background-color: white;}
-*{margin: 0px; padding: 0px; }
+*{margin: 0px; padding: 0px;}
 ul{list-style: none;} /* 리스트 앞에 . 제거 */
 a{text-decoration: none;} /* 하이퍼링크에 밑줄 제거 */
 
@@ -24,19 +24,24 @@ h1{
   text-align: center;
 }
 
-#site-nav{  /* 사이트간에 nav */
 
+#site-nav a{
+  font-size: 25px;
+  opacity: 85%;
+}
+
+#site-nav p{
+  font-size: 25px;
+  opacity: 85%;
+}
+
+  #site-nav{  /* 사이트간에 nav */
     position: absolute;
     top: 110px;
     right: 10px; 
     color: white;  
 }
 
-#site-nav a{
-
-    font-size: 25px;
-    opacity: 85%;
-  }
 
 
 .frame{
@@ -44,6 +49,20 @@ h1{
   flex-direction: column;
 }
 
+
+/*navigator*/
+
+
+/*recent works*/
+
+.recent-menu{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #C2B4AB;
+  text-align: right;
+  margin-top: 100px;
+}
 
 
 
@@ -104,108 +123,9 @@ h1{
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 300;
   font-size: 18px;
+
   margin: 0px;
 }
-
-
-
-
-
-
-/* RECENT WORKS */
-
-.recent-works{
-  display: flex;
-  flex-direction: column;
-}
-
-.article{
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 120px;
-  align-items: center;
-}
-
-.thumbnail{
-  width: 600px;
-}
-
-.article-info{
-  margin: 0px 20px;
-}
-
-.article-name{
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 50px;
-  margin-top: 0px;
-  margin-bottom: 30px;
-}
-
-.article-name:hover{
-  color: pink;
-  -webkit-text-stroke: 1px black;
-  transition: 0.3s;
-}
-
-
-
-.article-comment{
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 16px;
-  font-weight: 100;
-}
-
-.more{
-  width: content;
-  height: content;
-  float: right;
-  margin-right: 10px;
-
-
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  padding: 0px;
-}
-
-
-#name1{
-  position: relative;
-  right: 70px;
-}
-
-#name1:hover{
-  color: skyblue;
-}
-
-#name2-1{
-  text-align: right;
-  position: relative;
-  left: 0px;
-  margin-bottom: 0px;
-}
-
-#name2-2{
-  text-align: right;
-  position: relative;
-  left: 100px;
-}
-
-#name2-2:hover{
-  color: orange;
-}
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -240,3 +160,5 @@ table{
   color: white;
 }
 
+
+#page{width: 100vw; height: 100vh; margin: 0px auto;}

@@ -3,91 +3,107 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="/style/style.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;0,600;0,800;0,900;1,200;1,400;1,500;1,600;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
         <title>Myplan</title>
     </head>
     <body>
         <div id="page">
             <!-- start header -->
             <header>
-                <!-- Logo 만들어서 삽입하기 -->
-                <!-- <div id="logo">
-                    <img src="/images/logo1.png" alt="Logo">
-                </div> -->
-
-                <h1 id="page-name">My-plan</h1>
-
+                <h1 id="page-name">My plan</h1>
+    
                 <div id="site-nav">
                     <h4>
-                        <a href="gibum1.html">Introduce</a> |
-                        <a href="gibum3.html">Confidence</a> |
-                        <a href="gibum4.html">Future</a> |
-                        <a href="gibum5.html">KimGibum</a>
-                    </h4>  
+                        <a href="gibum1.html">Introduce</a>  |
+                        <a href="gibum3.html">Good & Not Good</a>  |
+                        <a href="gibum4.html">Future</a>  |
+                        <a href="index.html">HOME</a>
                     </h4> 
                 </div>
-                
             </header>
             <!-- end header -->
 
 
 
-            <!-- start main -->
-            <main>
-                
-                    <div class="nav">
-                        <label for="expand-nav"><b>MENU</b></label>   
-                        <ul>
-                            <li><a href="v" class="item">Home</a></li>
-                            <li><a href="#" class="item">2</a></li>
-                            <li><a href="#" class="item">3</a></li>
-                            <li><a href="#" class="item">4</a></li>
-                        </ul>
+                   <!-- body start -->
+        <body class="frame">
+    
+            <h5 class="value-menu">I'M GOING!</h5>
+    
+            <div class="recent-works">
+                <div class="article" id="arti1">
+                    <img class="thumbnail" id="thumb1" src="/images/CSS.jpg">
+                    <article class="article-info">
+                        <h3 class="article-name" id="name1">CASCADING</h3>
+                        <h3 class="article-name" id="name1-1">STYLE SHEET</h3>
+                        <p class="article-comment">
+                            CSS는 어떤 태그들에게 스타일 효과를 주는 언어이다.
+                            특정 요소들을 선택하여 스타일을 적용할 수있다. 이때 어떤 태그에 적용하는 지를 정의하는 문법이 필요한데, 이것을 문법에 선택자 라고 한다.
+                            관리성 - HTML에서 스타일 부분만 CSS로 따로 관리할 수 있다는 강점
+                            재사용성 - 스타일 서식을 공유해서 여러 웹페이지 디자인을 재사용하고, 통일할 수 있다.
+                            편의성 - 유지보수에도 많은 영향을 끼치지만, 작업 시간을 단축할 수 있는데도 큰 이점을 갖고있다.
+                        </p>
+                    </article>
+                </div>
+
+                <article class="article" id="arti2">
+                    <div class="article-info">
+                        <h3 class="article-name" id="name2">MarkUp Lang</h3>
+                        <h3 class="article-name" id="name2-1">HTML</h3>
+                        <p class="article-comment2" id="comment">
+                            HTML안에는 html 말고 css 와 JS도 사용할 수 있다. 이때 컴퓨터에게 이 코드는 어떤 언어인지 알려줌과 동시에 이 웹 페이지를 필요로 하는 유저에게 접근하기 쉽도록 많은 정보를 제공한다.
+                            사용하지 않아도 훌륭한 웹 브라우저를 만들수 있지만, 접근성이 떨어진다는것 하나만으로 가치가 떨어진다고 생각한다.
+                            그만큼 정보를 제공하는것은 중요하다는 생각을 했다.
+                        </p>
                     </div>
-                <!-- <div>
-                    <label for="hobby-select">Choose hobie</label>
+                    <img class="thumbnail2" id="thumb2" src="/images/HTML.jpg">
+                </article>
 
-                    <select name="hobby" id="hobby-select">
-                        <option value="">--please choose option</option>
-                        <option value="soccer">Soccer</option>
-                        <option value="baseball">Baseball</option>
-                        <option value="pingpong">Pingpong</option>
-                    </select>
-                </div> -->
-
-                
-            </main>
-            <!-- end main -->
-
-            <!-- start footer-->
-            <footer>
-                <span>
-                    <div class="div1">                   
-                        Name : 김기범<br>
-                        Age : 24<br>
-                        Email : g16um9806@gmail.com<br>
-                        Git Hub :<a href="https://github.com/g16um98" target="_blank"> https://github.com/g16um98</a><br>
-                    </div>    
-                    <div>
-                        <table class="div2">
-                            <thead>
-                                <tr>
-                                    <th colspan="2">Developer : 김기범</th>
-                                </tr>
-                            </thead>
-                                <tr>
-                                    <td>Front : </td>
-                                        <td>HTML , CSS , JavaScript</td>
-                                </tr>
-                                <tr>
-                                    <td>back : </td>
-                                    <td>JAVA , JAVA , JAVA</td>
-                                </tr>
-                        </table>
+                <article class="article" id="arti1">
+                    <img class="thumbnail" id="thumb1" src="/images/javascript.jpg">
+                    <div class="article-info">
+                        <h3 class="article-name" id="name3">JavaScript</h3>
+                        <h3 class="article-name" id="name3-1">Object Lang</h3>
+                        <p class="article-comment">
+                            자바스크립트를 이용하면 웹에 풍부한 효과를 넣을 수 있지만, 2000년대 초반만 해도
+                            자바스크립트는 개발자들에게 무시당하는 언어였다. 별다른 기능도 없고, 성능도 별로 좋지 않았기 때문이다. 
+                            하지만 최근 몇 년 사이에 다양한 자바스크립트 프레임워크와 라이브러리가 
+                            생기면서 자바스크립트 생태계는 크게 확장되고 있으며, 그 위상도 점점 높아지고 있다.
+                            [Javascript] - 웹을 풍부하게 만들어주는 작고 가벼운 언어
+                        </p>
                     </div>
-                </span>
-            </footer>
-            <!-- end footer-->
-        </div>
+                </article>
+            </div>
+        </body>
+        <!-- body start -->
+
+        <!-- footer start  -->
+        <footer class="footer">
+            <div class="div1">                   
+                Name : 김기범<br>
+                Age : 24<br>
+                Email : g16um9806@gmail.com<br>
+                Git Hub :<a href="https://github.com/g16um98" target="_blank"> https://github.com/g16um98</a><br>
+            </div>    
+            <div>
+                <table class="div2">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Developer : 김기범</th>
+                        </tr>
+                    </thead>
+                        <tr>
+                            <td>Front : </td>
+                                <td>HTML , CSS , JavaScript</td>
+                        </tr>
+                        <tr>
+                            <td>back : </td>
+                            <td>JAVA , JAVA , JAVA</td>
+                        </tr>
+                </table>
+            </div>
+        </footer>
+        <!-- footer end --> 
     </body>
 </html> 

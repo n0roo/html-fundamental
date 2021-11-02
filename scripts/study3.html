@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>함수</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*
+            fuction 함수명([인자...[,인자]]){
+                코드
+                return 반환값
+            }
+            
+            
+            // 함수 정의
+            function numbering(){
+               for(var i = 0; i < 10; i++){
+                   document.write("everyday coding"+i+"<br/>")
+               }
+            }
+            numbering();
+            */
+
+            // return 은 return뒤에 나오는
+            /*
+            function get_argument(arg){
+                return arg;
+            }
+
+            alert(get_argument(1));
+            alert(get_argument(2));
+            
+
+            function get_argument(arg1, arg2){
+                return arg1 + arg2;
+            }
+
+            alert(get_argument(10,20));
+            alert(get_argument(20,30));
+            */
+
+            numbering = function(){
+                i = 0;
+                while(i < 10){
+                    document.write(i);
+                    i += 1;
+                }
+            }
+
+            function numbering(){
+                i = 0;
+                while(i < 10){
+                    document.write(i);
+                    i += 1;
+                }
+            }
+        </script>
+    </body>
+</html>

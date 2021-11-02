@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>배열</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*
+            function get_members(){
+                return ['kim', 'gi', 'bum','good'];
+            }
+
+            var members = get_members();
+
+            document.write(members[0].toUpperCase()+"<br>");
+            document.write(members[1].toUpperCase()+"<br>");
+            document.write(members[2].toUpperCase()+"<br>");
+
+            for(var i = 0; i < members.length; i++){
+                document.write(members[i].toUpperCase()+"<br>");
+            }
+            */
+
+            // 배열의 제어
+
+            var a = ['a','b','c'];
+            a.splice(1,0, 'd');
+            document.write(a); // 출력 값 = a,d,b,c
+
+            a.splice(1,1, 'z');
+            document.write(a);
+            
+        </script>
+    </body>
+</html>

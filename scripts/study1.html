@@ -3,19 +3,51 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>JavaScript DataType</title>
+	<title>조건문</title>
 </head>
 
 <body>
 
-	<h1>심볼 타입</h1>
 	<p id="result"></p>
 
 	<script>
-		var sym = Symbol("javascript");		// 심볼 타입
-		var symObj = Object(sym); 			// 객체 타입
+		/*
 		
-        document.getElementById("result").innerHTML = (typeof symObj);
+
+		var id = prompt('아이디를 입력해주세요');
+
+		if(id == 'gibum'){
+			var password = prompt('비밀번호를 입력해주세요.');
+			if(password == '1111'){
+				alert('로그인에 성공하셨습니다.');
+			}else{
+				alert('비밀번호가 일치하지 않습니다.');
+			}
+		}else{
+			alert('아이디가 일치하지 않습니다.')
+		}
+		*/
+
+		/*
+		var id = prompt('아이디를 입력해주세요');
+		var password = prompt('비밀번호를 입력해주세요.');
+
+		if(id == 'gibum' && password === '1111'){
+			alert('로그인에 성공하셨습니다.');
+		}else{
+			alert('아이디가 일치하지 않습니다.')
+		}
+		*/
+		
+		var id = prompt('아이디를 입력해주세요.');
+		var password = prompt('비밀번호를 입력해주세요.')
+
+		if((id === 'gibum'||id === 'kim9806'||id === 'study') && password === '1111'){
+			alert('로그인 성공.');
+		} else {
+			alert('로그인 실패.');
+		}
+
 	</script>
 	
 </body>

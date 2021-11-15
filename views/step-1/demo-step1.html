@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Step2</title>
+<link rel="stylesheet" href="/style/numbergame.css">
+</head>
+<body>
+    
+    <input id="answerBox" type="text" value="">
+    <button type="button" onclick="change();">입력</button>
+    <button type="button" onclick="reStartGame()">재시작</button>
+    
+
+<script>
+
+function reStartGame(){ // 재시작
+    window.location.reload();
+}
+
+let sampleNum = [1,2,3,4,5,6,7,8,9]; // randomNum에서 뽑아갈 숫자의 보기
+let randomNum = []; // sampleNum에서 하나를 가져온다.
+
+function pickNum(){ // 실행시 랜덤의 정수 3개를 생성하는 함수.
+    for(i = 0; i < 3; i += 1){ // 랜덤으로 뽑을 숫자의 갯수를 조절할수 있는 반복문
+        let deleteIndex = Math.floor(Math.random() * (9 - i)); 
+        // 0~9중의 정수 하나를 랜덤으로 생성하고 그 수는 sampleNum의 인덱스가 될것이다. 이때 sampleNum에서 인덱스 하나를 뽑아서 randomNum에 넣기때문에 반복문이 실행될때 마다 sampleNum의 인덱스는 하나씩 줄어든다.
+        randomNum.push(sampleNum[deleteIndex]); // sampleNum중 랜덤한 index값 하나를 추출해 randomNum에 넣는다.
+        sampleNum.splice(deleteIndex, 1); // 중복된 숫자가 뽑히지 않기 위해서 한번 생성되어 빠져나간 sampleNum의 인덱스는 삭제하는 로직이다.
+    }
+    console.log('정답 : ' + randomNum);
+}
+pickNum();
+var alertLength = '';
+var alertSameNum = '';
+function checkInput() {
+    if(modifyAnswer.length !== 3) {
+        // return alert('no')
+        alertLength = '3자리수만 입력이 가능합니다.'
+        return false;
+    }
+    if(new Set(modifyAnswer).size !== 3) {     
+        // return alert('nono')
+        alertSameNum = '같은 숫자는 함께 입력이 불가능합니다.'
+        return false;
+    }
+    // if(tryAnswer.includes()) {
+    //     // return alert('nononono')
+    // }
+    return true ;
+}
+
+let couter = 10;
+let tryAnswer = [];
+function change() {
+    tryAnswer.shift();
+    let Strike = 0;
+    let Ball = 0;
+    var inputAnswer = document.getElementById("answerBox").value; //텍스트 칸에 입력한 값을 변수에 담아둔다
+    answerBox.value = '';  
+    tryAnswer.push(inputAnswer);
+    modifyAnswer = tryAnswer.join(',')
+    console.log('입력값 : ' + tryAnswer)
+    if(checkInput() == true){
+        for(i = 0; i < 3; i += 1){
+            if(modifyAnswer[i] == randomNum[i]){
+                Strike++ ;   
+            }else if(modifyAnswer.indexOf(randomNum[i]) < 0 != true){
+                Ball++ ;
+                
+            }
+        }
+        couter -= 1;
+        console.log(Strike + '스트라이크 ' + Ball + '볼    ' + '남은기회:'+couter)
+        console.log()
+        if(couter == 0){
+            console.log('패배!!! 정답은 : ' + randomNum + ' 입니다.')
+            console.log('※※※The End Game※※※')
+        }
+        if(inputAnswer == randomNum.join('')){
+            console.log('정답!!! 게임에서 승리하였습니다!!!')
+            console.log('※※※The End Game※※※')
+        }
+    }
+    console.log(alertLength + alertSameNum)
+    alertLength = '';
+    alertSameNum = '';
+}
+
+
+
+
+</script>
+      
+</body>
+</html>

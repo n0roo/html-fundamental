@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>조건문</title>
+</head>
+
+<body>
+
+	<p id="result"></p>
+
+	<script>
+		/*
+		
+
+		var id = prompt('아이디를 입력해주세요');
+
+		if(id == 'gibum'){
+			var password = prompt('비밀번호를 입력해주세요.');
+			if(password == '1111'){
+				alert('로그인에 성공하셨습니다.');
+			}else{
+				alert('비밀번호가 일치하지 않습니다.');
+			}
+		}else{
+			alert('아이디가 일치하지 않습니다.')
+		}
+		*/
+
+		/*
+		var id = prompt('아이디를 입력해주세요');
+		var password = prompt('비밀번호를 입력해주세요.');
+
+		if(id == 'gibum' && password === '1111'){
+			alert('로그인에 성공하셨습니다.');
+		}else{
+			alert('아이디가 일치하지 않습니다.')
+		}
+		*/
+		
+		var id = prompt('아이디를 입력해주세요.');
+		var password = prompt('비밀번호를 입력해주세요.')
+
+		if((id === 'gibum'||id === 'kim9806'||id === 'study') && password === '1111'){
+			alert('로그인 성공.');
+		} else {
+			alert('로그인 실패.');
+		}
+
+	</script>
+	
+</body>
+
+</html>

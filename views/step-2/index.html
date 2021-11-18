@@ -6,7 +6,23 @@
 </head>
 <body>
     <head>
-        게임에대한 규칙 설명적을 곳
+        <h1>숫자야구 게임</h1>
+        <br>
+        <h2>게임 규칙</h2>
+        <ul>
+            <p><b>숫자 야구란 감춰진 3개의 숫자를 무엇인지 맞추는 게임입니다.</b></p>
+            <li>3자리 숫자와 위치가 모두 맞아야 승리 입니다.</li>
+            <li>1 ~ 9까지 숫자로 구성되어 있으며, 각 숫자는 한번씩만 사용이 가능합니다.</li>
+            <li>숫자와 자리의 위치가 맞으면 Strike(스트라이크), 숫자만 맞으면 Ball(볼) 입니다.</li>
+            <li>기회는 10번이며 그 안에 정답을 맞추면 승리!!! 맞추지 못하면 패배... 입니다.</li>
+        </ul>
+        <br>
+        <p>
+        예시) 정답 : 123<br>
+        - a. 102 = 1S 1B<br>
+        - b. 124 = 2S 0B<br>
+        <br><br>
+        </p>
     </head>
     <form id="form">
         <input type="text" id="answerBox">
@@ -16,6 +32,7 @@
     <div id="alert1"></div>
     <div id="alert2"></div>
     <div id="alert3"></div>
+    <div id="alert4"></div>
     <div id="counting"></div>
 
 
@@ -23,6 +40,7 @@
     const alert1 = document.querySelector('#alert1');
     const alert2 = document.querySelector('#alert2');
     const alert3 = document.querySelector('#alert3');
+    const alert4 = document.querySelector('#alert4');
     const answerBox = document.querySelector('#answerBox');
     const form = document.querySelector('#form');
     const counting = document.querySelector('#counting');
@@ -43,26 +61,32 @@
     }
     console.log('정답 : ' + randomNum); // 확인용으로 콘솔에 정답 띄우기
 
-    const tryAnswer = [];
+    const tryAnswer = []; // 시도한 정답을 담는 배열
     
-
+    // 입력한 정답이 규칙에 맞는 정답인지 1차적으로 검사하는 함수
     function checkInput(answerBox) {
-        if(answerBox.length !== 3) {
+        if(answerBox.length !== 3) { // answerBox의 들어오는 값의 길이가 3이 아니면 실행
             const alertLength = document.createTextNode(`3자리 숫자만 허용합니다.`);
             alert1.appendChild(alertLength);
             return false;
         }
-        if(new Set(answerBox).size !== 3) {
+        if(new Set(answerBox).size !== 3) { // Set()은 value로 이루어진 컬렉션이다 . array랑은 다르게 중복된 value는 포함하지 않는다. 이 원리를 이용해 answerBox의 값이 3이 아니면 if문 실행
+            // Set() 은 length가 아니라 size로 길이를 나타낸다.
             const alertOverlap = document.createTextNode(`중복된 숫자는 허용하지 않습니다.`);
             alert2.appendChild(alertOverlap);
             return false;
         }
-        if(tryAnswer.includes(answerBox)) {
+        if(tryAnswer.includes(answerBox)) { // .includes()는 문자열이 특정 문자열을 포함하는지 확인하는 메서드이다. tryAnswer의 이미 저장된 값이 또 들어오면 if문 실행
             const alertSameNum = document.createTextNode(`이미 시도한 숫자입니다.`);
             alert3.appendChild(alertSameNum);
             return false;
         }
-        return true ;
+        if((answerBox = answerBox >=123 && answerBox <= 987) != true){ // 0이 들어간다면 조건에 걸린 숫자를 나타낼수 없기 때문에 이를 이용해 0이 포함된 값을 입력하면 if문 실행
+            const alertZero = document.createTextNode(`숫자 0은 입력이 불가능 합니다.`);
+            alert4.appendChild(alertZero);
+            return false;
+        }
+        return true ; // 모든 과정을 통과했을시 true를 return
 
     }
 
@@ -70,29 +94,25 @@
     let Ball = 0 ;   
     let countChance = 9;
     form.addEventListener('submit', (event) => {
-        
-        event.preventDefault(); 
+        event.preventDefault(); // event 실행시 새로고침을 누른것처럼 화면이 깜빡거리는 현상을 없애는 코드
         const userAnswer = answerBox.value; //form 안에 이벤트 타겟중 첫번째의 벨류를 의미 즉,text
         answerBox.value = ''; // 입력후 텍스트칸 초기화  
-        if(checkInput(userAnswer)){  
-            
-            if(randomNum.join('') == userAnswer) {
+        if(checkInput(userAnswer)){  // 함수가 true일때 if문 안에서 사용이 가능하다. 이를 이용해 1차적으로 value의 상태를 점검
+            if(randomNum.join('') == userAnswer) { // 배열의 정답을 join()을 통해 문자열로 변환후 userAnswer과 비교
                 counting.append(`${userAnswer}: 3스트라이크 0볼 `, document.createElement('br'));
                 const winMessage = document.createTextNode('정답!!! 승리를 축하드립니다. ');
                 counting.append(winMessage);
                 return;
             }
-            if(countChance == 0) {
+            if(countChance == 0) { // 10번의 기회동안 정답을 맞추지 못하면 패배문구 출력
                 counting.append(`${userAnswer}: ${Strike}스트라이크 ${Ball}볼   남은 기회 : ${countChance}`, document.createElement('br'));
                 const loseMessage = document.createTextNode('패배!!! 정답은 : ' + randomNum + " 이였습니다.")
                 counting.appendChild(loseMessage);   
                 return ;
-                
-            }else{
+            }else{ // 입력될때마다 Strike , Ball을 초기화
                 Ball = 0;
                 Strike = 0;
             }
-
             for(let i = 0; i < 3; i += 1) {
                 const answerTarget = userAnswer.indexOf(randomNum[i]); // 정답의 첫번째부터 동일한 숫자가 있다면 그 값으로 반환
                 if(answerTarget > -1) { // 동일한 수가 존재하면 실행
@@ -107,7 +127,6 @@
             countChance -= 1;
             tryAnswer.push(userAnswer);
         }
-        // Strike Ball 판정 알고리즘
     });
 
 </script>

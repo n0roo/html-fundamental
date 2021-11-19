@@ -1,11 +1,24 @@
 body{
-    background-color: gray;
-}
-.Startbutton{
-    
-    width: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 3%;
+    background-color: black;
+    color: white;
 }
 
-.answer{
-    width: 120px;
+
+#a{
+    display: flex;
+    margin: 30px;
 }
+
+form{
+    margin-left: 180px;
+}
+
+#alert1, #alert2 ,#alert3 ,#alert4{
+    color: red;
+    margin: 10px;
+}
+
+
